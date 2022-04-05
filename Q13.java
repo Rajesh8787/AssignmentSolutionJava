@@ -9,24 +9,31 @@ public class Q13 {
 		// TODO Auto-generated method stub
 
 		
-		 int n, first, second, third, forth, fifth;
-    
-    n=12345;
+		 int n, sum, first,second,third,forth,fifth;
+	    System.out.println("Enter a 5-digit number\n");
 
-    first = n/10000;
-    n %= 10000;
-    
-    second = n/1000; 
-    n %= 1000;
-    
-    third = n/100;
-    n = n%100;
-    
-    forth = n/10;
-    fifth = n/10;
+	    Scanner sc=new Scanner(System.in);
+	    n=sc.nextInt();
+	    
+	   
+	   
+	   
+	    n=12345;
 
-    int sum = first + forth;
-    System.out.println("sum: " + sum);
+	    first = n/10000;
+	    n %= 10000;
+	    
+	    second = n/1000; 
+	    n %= 1000;
+	    
+	    third = n/100;
+	    n = n%100;
+	    
+	    forth = n/10;
+	    fifth = n/10;
+
+	    sum = first + forth;
+	    System.out.println("sum: " + sum);
 	}
 
 } 
@@ -34,3 +41,6 @@ public class Q13 {
 	   
 
 	  
+	
+
+
