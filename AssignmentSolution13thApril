@@ -1,0 +1,434 @@
+Write a program to concatenate StringBuilder & StringBuffer objects.
+
+package trainnig;
+
+package com.practice;
+
+public class StringDemos {
+	
+	
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+
+		
+			System.out.println(" ===========StringBuilder================ ");
+			
+			
+			
+			
+			StringBuilder s1 = new StringBuilder("Hello");    //String1
+	        StringBuilder s2 = new StringBuilder(" World");    //String 2  
+	        StringBuilder s = s1.append(s2);
+	        System.out.println("After StringBuilder  concatenation is "+s);
+			
+		      
+		       StringBuffer s3 = new StringBuffer("Rahul ");     
+		        StringBuffer s4 = new StringBuffer("kumar");   
+		        StringBuffer s5 = s3.append(s4);
+		        System.out.println("After StringBuffer  concatenation is "+s5);
+			
+			
+			
+			
+			
+		}
+	}
+
+
+=================================================================================
+
+Write a program to get a substring of a StringBuffer.
+
+package trainnig;
+
+package com.practice;
+
+public class StringDemos {
+	
+	
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+
+    
+		       StringBuffer s3 = new StringBuffer("Rahul ");     
+	        StringBuffer s4 = new StringBuffer("kumar");    //String 2  
+	        StringBuffer s5 = s3.append(s4);
+			
+	        System.out.println("Substring  is "+s5.substring(6));
+		
+			
+			
+			
+			
+			
+		}
+	}
+
+=================================================================================
+
+Write a program to display the length and capacity of String, StringBuilder and StringBuffer
+
+package com.practice;
+
+public class StringDemos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	System.out.println(" ===========String================ ");
+	
+	String sobj1=new String("Sumedha");
+	 System.out.println("Length of "+sobj1+"is  "+sobj1.length()+"\n");
+	
+	
+	System.out.println(" ===========StringBuilder================ ");
+	
+	StringBuilder sbl=new StringBuilder();
+	sbl.append(" this will the capacity of string buffer obj");
+	
+	System.out.println("Length of "+sbl+"is "+sbl.length());
+	
+	 System.out.println("increased capacity of "+sbl+"is "+sbl.capacity()+"\n");
+	
+	System.out.println(" ==========StringBuffer================ ");
+	
+	StringBuffer sbf=new StringBuffer();
+	sbf.append("hello");
+	sbf.append("User");
+	System.out.println("Length of "+sbf+"is "+sbf.length());
+	 System.out.println("increased capacity of "+sbf+"is "+sbf.capacity()+"\n");
+	
+	}
+	
+}
+
+=================================================================================
+
+Write a program to check whether two given strings contains same set of characters as well as having same length.
+
+ input
+ String s1 = "amar";
+ String s2= "rama";
+ 
+ output : Both contains same characters
+
+package com.practice;
+
+public class StringDemos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	System.out.println(" ===========String================ ");
+	
+	String s1=new String("amar");
+	
+	String s2=new String("rama");
+	
+	 String a = getString(s1.charAt(0)),
+	           b = getString(s2.charAt(0));
+	 
+	 
+	    for (int i = 1; i < s1.length(); i++)
+	        if (s1.charAt(i) != s1.charAt(i - 1))
+	        {
+	            a += getString(s1.charAt(i));
+	        }
+	 
+	    
+	    for (int i = 1; i < s2.length(); i++)
+	        if (s2.charAt(i) != s2.charAt(i - 1))
+	        {
+	            b += getString(s2.charAt(i));
+	        }
+	 
+	   
+	    if (a.equals(b))
+	    {
+	    	System.out.println("Both contains same characters");
+	    
+	    }
+	    else
+	    {
+	    	System.out.println("Both contains not same characters");
+	    }
+	
+	
+	}
+
+	private static String getString(char charAt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
+
+=================================================================================
+Write a program to lexicographically arrange the given strings "Raman" , "Aman" , "Vikram" , "Shyam" and "Bhuvan".
+
+ public class StringLexi {
+  public static void main(String[] args) {
+
+    String[] Str = { "Raman", "Aman", "Vikram", "Shyam","Bhuvan" };
+
+    for(int i = 0; i < 3; ++i) {
+      for (int j = i + 1; j < 4; ++j) {
+          
+        if (Str[i].compareTo(Str[j]) > 0) {
+
+          
+          String temp = Str[i];
+          Str[i] = Str[j];
+          Str[j] = temp;
+        }
+      }
+    }
+
+    System.out.println("lexicographical order are:");
+    
+    for(int i = 0; i < 4; i++) {
+      System.out.println(Str[i]);
+    }
+  }
+}
+
+=================================================================================
+
+Wrapper Classes (Integer, Byte, Short, Long, Float, Double, Character, Boolean)
+Create objects of all the wrapper classes and print then on console, with using constructor.
+
+public class WrapperClass {
+    public static void main(String[] args) {
+        Integer objInteger = new Integer(5);
+        Byte objByte = new Byte((byte) 9);
+        Short objShort = new Short((short) 2);
+        Long objLong = new Long(156L);
+        Double objDouble = new Double(15.34);
+        Float objFloat = new Float(11.3f);
+        Boolean objBoolean = new Boolean(true);
+        Character objCharacter = new Character('b');
+
+        System.out.println(objInteger);
+        System.out.println(objBoolean);
+        System.out.println(objByte);
+        System.out.println(objDouble);
+        System.out.println(objCharacter);
+        System.out.println(objFloat);
+        System.out.println(objLong);
+        System.out.println(objShort);
+
+    }
+}
+
+
+==================================================================================
+Write a program to demonstrate boxing and un-boxing.
+
+import java.util.ArrayList;
+class Autoboxing
+{
+    public static void main(String[] args)
+    {
+        char ch = 'c';
+  
+        // Autoboxing- primitive to Character object conversion
+        Character c = ch;
+  
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+  
+       
+        arrayList.add(25);
+  
+        
+        System.out.println(arrayList.get(0));
+    }
+}
+
+// Java program to demonstrate Unboxing
+import java.util.ArrayList;
+
+class Unboxing
+{
+	public static void main(String[] args)
+	{
+		Character ch = 'c';
+
+		
+		char c = ch;
+
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		arrayList.add(24);
+
+		
+		int num = arrayList.get(0);
+
+		
+		System.out.println(num);
+	}
+}
+
+
+=================================================================================
+
+
+Create an array of 5 integers and print sum and average by creating Integer sum(Integer[] arr) and Double average(Integer sum, Integer numberOfElements). Do casting as required for getting proper result;
+public class Answer {
+    public static void main(String[] args) {
+        Integer[] arr = {5,10,15,25,30};
+        Answer obj = new Answer();
+        Integer sum = obj.sum(arr);
+        Integer numberOfElements = arr.length;
+        Double ave = obj.average(sum, numberOfElements);
+        System.out.println("sum = " + sum);
+        System.out.println("average = " + ave);
+
+
+    }
+
+    public Double average(Integer sum, Integer numberOfElements) {
+        Double response = 0.0;
+        response = (double) sum / numberOfElements;
+        return response;
+    }
+
+    public Integer sum(Integer[] arr) {
+        Integer response = 0;
+        for (Integer integer : arr) {
+            response += integer;
+        }
+        return response;
+    }
+}
+=================================================================================
+Write a program to print ASCII values of Character objects using wrapper class.
+public class Solution {
+    public static void main(String[] args) {
+        Character obj = Character.valueOf('B');
+        System.out.println((int) obj);
+    }
+}
+
+=================================================================================
+
+Write a program to print the smaller of the two given Integer, Double and Character Objects.
+
+public class Smaller {
+    public static void main(String[] args) {
+        Integer objInteger1 = Integer.valueOf(5);
+        Integer objInteger2 = Integer.valueOf(20);
+        if (Integer.compare(objInteger1, objInteger2) == -1) {
+            System.out.println(objInteger1);
+        } else if (Integer.compare(objInteger1, objInteger2) == 1) {
+            System.out.println(objInteger2);
+        } else {
+            System.out.println("equal");
+        }
+        Double objDouble1 = Double.valueOf(12.34);
+        Double objDouble2 = Double.valueOf(123.43);
+        if (Double.compare(objDouble1, objDouble2) == -1) {
+            System.out.println(objDouble1);
+        } else if (Double.compare(objDouble1, objDouble2) == 1) {
+            System.out.println(objDouble2);
+        } else {
+            System.out.println("equal");
+        }
+    }
+}
+
+=================================================================================
+
+Collection (ArrayList & HashSet)
+Create a List & Set of 10 integers and demonstrate ordered and unordered collection as well as duplicate allowed and not allowed. Demonstrate addAll() method also.
+
+package com.practice;
+
+import java.util.*;
+
+public class CreateArrayListFromCollectionExample {
+
+	public static void main(String[] args)
+	{
+		List <Integer> SetInt=new ArrayList<>(10);
+		SetInt.add(2);
+		SetInt.add(3);
+		SetInt.add(5);
+		SetInt.add(7);
+		
+	
+	System.out.println("SetInt1 of Integer are "+SetInt);
+	System.out.println("creating another integer set2 and adding value");
+	
+	List <Integer> SetInt2=new ArrayList<>();
+	
+	    SetInt2.add(13);
+	    
+		SetInt2.add(17);
+                SetInt2.add(18);
+		SetInt2.add(20);
+		SetInt2.add(22);
+		System.out.println("SetInt2 of Integer are"+SetInt2);
+		
+		System.out.println("Adding unordered value 9 to SetInt2\n");
+		SetInt2.add(9);
+		
+	    SetInt.addAll(SetInt2);
+	    System.out.println("After using addAll method");
+	    System.out.println("Set of Integer are unordered"+SetInt);
+	
+	   
+}
+
+	
+	
+}
+
+=================================================================================
+
+Create a List of 10 Integer objects and try to access 15th index. Properly analysis the output.
+
+package com.practice;
+
+import java.util.*;
+
+public class CreateArrayListFromCollectionExample {
+
+	public static void main(String[] args)
+	{
+		List <Integer> SetInt=new ArrayList<>(10);
+		SetInt.add(2);
+		SetInt.add(3);
+		SetInt.add(5);
+		SetInt.add(7);
+		
+	
+	System.out.println("SetInt1 of Integer are "+SetInt);
+	System.out.println("creating another integer set2 and adding value");
+	
+	List <Integer> SetInt2=new ArrayList<>();
+	
+	    SetInt2.add(13);
+	    
+		SetInt2.add(15);
+        SetInt2.add(18);
+		SetInt2.add(20);
+		SetInt2.add(22);
+		System.out.println("SetInt2 of Integer are"+SetInt2);
+		
+		System.out.println("Adding unordered value 9 to SetInt2\n");
+		SetInt2.add(9);
+		
+	    SetInt.addAll(SetInt2);
+	    System.out.println("After using addAll method");
+	    System.out.println("Set of Integer are unordered"+SetInt);
+	
+	//finding index
+	
+	
+     System.out.println("index Numbers are"+SetInt.get(15));
+	}
+   
+}
+
+===============================================================================
